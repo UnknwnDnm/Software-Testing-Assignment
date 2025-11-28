@@ -20,7 +20,7 @@ jobs:
         node-version: 14
 
     - name: Run tests and generate coverage
-      run: npm run test:coverage
+      run: npm run coverage
       # OR whatever script produces coverage/lcov.info
 
     - name: Upload coverage to Coveralls
