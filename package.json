@@ -5,14 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "test": "mocha",
-  "coverage": "nyc --reporter=lcov npm test | coveralls"
+    "test": "mocha",
+    "coverage": "c8 --reporter=lcov mocha && cat ./coverage/lcov.info | coveralls"
   },
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "c8": "^8.0.1",
+    "chai": "^6.2.1",
     "coveralls": "^3.1.1",
-    "mocha": "^11.7.5",
-    "nyc": "^17.1.0"
+    "mocha": "^11.7.5"
   }
 }
