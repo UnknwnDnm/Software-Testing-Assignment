@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/.internal/createRound.js</title>
+    <title>Code coverage report for src/.internal/nodeTypes.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/.internal</a> createRound.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/.internal</a> nodeTypes.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>25/25</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">11.76% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/9</span>
+                <span class='fraction'>2/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/25</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -88,7 +88,10 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -98,46 +101,52 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * Creates a function like `round`.
- *
- * @private
- * @param {string} methodName The name of the `Math` method to use when rounding.
- * @returns {Function} Returns the new round function.
- */
-function createRound(methodName) {
-  const func = Math[methodName]
-  return (number, precision) =&gt; {
-    precision = precision == null ? 0 : (precision &gt;= 0 ? Math.min(precision, 292) : Math.max(precision, -292))
-    if (precision) {
-      // Shift with exponential notation to avoid floating-point issues.
-      // See [MDN](https://mdn.io/round#Examples) for more details.
-      let pair = `${number}e`.split('e')
-      const value = func(`${pair[0]}e${+pair[1] + precision}`)
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import freeGlobal from './freeGlobal.js'
 &nbsp;
-      pair = `${value}e`.split('e')
-      return +`${pair[0]}e${+pair[1] - precision}`
-    }
-    return func(number)
-  }
-}
+/** Detect free variable `exports`. */
+const freeExports = typeof exports === 'object' <span class="branch-0 cbranch-no" title="branch not covered" >&amp;&amp; exports !== null <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; !exports.nodeType <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; exports</span>
 &nbsp;
-export default createRound
+/** Detect free variable `module`. */
+const freeModule = freeExports <span class="branch-0 cbranch-no" title="branch not covered" >&amp;&amp; typeof module === 'object' <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; module !== null <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; !module.nodeType <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; module</span>
+&nbsp;
+/** Detect the popular CommonJS extension `module.exports`. */
+const moduleExports = freeModule <span class="branch-0 cbranch-no" title="branch not covered" >&amp;&amp; freeModule.exports === freeExports</span>
+&nbsp;
+/** Detect free variable `process` from Node.js. */
+const freeProcess = moduleExports <span class="branch-0 cbranch-no" title="branch not covered" >&amp;&amp; freeGlobal.process</span>
+&nbsp;
+/** Used to access faster Node.js helpers. */
+const nodeTypes = ((() =&gt; {
+  try {
+    /* Detect public `util.types` helpers for Node.js v10+. */
+    /* Node.js deprecation code: DEP0103. */
+    const typesHelper = freeModule <span class="branch-0 cbranch-no" title="branch not covered" >&amp;&amp; freeModule.require <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; freeModule.require('util').types</span>
+    return typesHelper
+<span class="branch-0 cbranch-no" title="branch not covered" >      ? typesHelper</span>
+      /* Legacy process.binding('util') for Node.js earlier than v10. */
+      : freeProcess <span class="branch-0 cbranch-no" title="branch not covered" >&amp;&amp; freeProcess.binding <span class="branch-0 cbranch-no" title="branch not covered" ></span>&amp;&amp; freeProcess.binding('util')</span>
+  } <span class="branch-0 cbranch-no" title="branch not covered" >catch (e) {}</span>
+})())
+&nbsp;
+export default nodeTypes
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
