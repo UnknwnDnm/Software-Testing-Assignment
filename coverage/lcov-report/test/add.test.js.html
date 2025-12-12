@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/isEmpty.js</title>
+    <title>Code coverage report for test/add.test.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> isEmpty.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">test</a> add.test.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.1% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>67/69</span>
+                <span class='fraction'>74/74</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">68.42% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>13/19</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.1% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>67/69</span>
+                <span class='fraction'>74/74</span>
             </div>
         
             
@@ -132,7 +132,12 @@
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
 <a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -176,100 +181,110 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import getTag from './.internal/getTag.js'
-import isArguments from './isArguments.js'
-import isArrayLike from './isArrayLike.js'
-import isBuffer from './isBuffer.js'
-import isPrototype from './.internal/isPrototype.js'
-import isTypedArray from './isTypedArray.js'
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Tests for the add.js functions.
+// COMP.SE.200 Software Testing
 &nbsp;
-/** Used to check objects for own properties. */
-const hasOwnProperty = Object.prototype.hasOwnProperty
+import { expect } from 'chai';
+import add from '../src/add.js';
 &nbsp;
-/**
- * Checks if `value` is an empty object, collection, map, or set.
- *
- * Objects are considered empty if they have no own enumerable string keyed
- * properties.
- *
- * Array-like values such as `arguments` objects, arrays, buffers, strings, or
- * jQuery-like collections are considered empty if they have a `length` of `0`.
- * Similarly, maps and sets are considered empty if they have a `size` of `0`.
- *
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is empty, else `false`.
- * @example
- *
- * isEmpty(null)
- * // =&gt; true
- *
- * isEmpty(true)
- * // =&gt; true
- *
- * isEmpty(1)
- * // =&gt; true
- *
- * isEmpty([1, 2, 3])
- * // =&gt; false
- *
- * isEmpty('abc')
- * // =&gt; false
- *
- * isEmpty({ 'a': 1 })
- * // =&gt; false
- */
-function isEmpty(value) {
-  if (value == null) {
-    return true
-  }
-  if (isArrayLike(value) &amp;&amp;
-      (Array.isArray(value) <span class="branch-0 cbranch-no" title="branch not covered" >|| typeof value === 'string' <span class="branch-0 cbranch-no" title="branch not covered" ></span>|| typeof value.splice === 'function' <span class="branch-0 cbranch-no" title="branch not covered" ></span>||</span>
-        isBuffer(value) <span class="branch-0 cbranch-no" title="branch not covered" >|| isTypedArray(value) <span class="branch-0 cbranch-no" title="branch not covered" ></span>|| isArguments(value))</span>) {
-    return !value.length
-  }
-  const tag = getTag(value)
-  if (tag == '[object Map]' || tag == '[object Set]') {
-    return !value.size
-  }
-  if (isPrototype(value)) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
-<span class="cstat-no" title="statement not covered" >    return !Object.keys(value).length</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-  for (const key in value) {
-    if (hasOwnProperty.call(value, key)) {
-      return false
-    }
-  }
-  return true
-}
+// Tests created for add.js function
+describe('add.js', function() {
 &nbsp;
-export default isEmpty
+  // Part 1 tests:
+&nbsp;
+  // unit_ADD_01, add two positive integers
+  it('add.js: add two positive integers', function() {
+    expect(add(5, 10)).to.equal(15);
+  });
+&nbsp;
+  // unit_ADD_02, add positive and negative number
+  it('add.js: add positive and negative number', function() {
+    expect(add(8, -3)).to.equal(5);
+  });
+&nbsp;
+  // unit_ADD_03, add floating point values
+  it('add.js: add floating point values', function() {
+    expect(add(2.5, 1.2)).to.equal(3.7);
+  });
+&nbsp;
+  // unit_ADD_04, add numeric strings
+  it('add.js: add numeric strings', function() {
+    expect(add("4", "3")).to.equal("43");
+  });
+&nbsp;
+  // unit_ADD_05, add with invalid input null
+  it('add.js: add null and number', function() {
+    expect(add(null, 5)).to.equal(5);
+  });
+&nbsp;
+  // unit_ADD_06, add undefined and number
+  it('add.js: add undefined and number', function() {
+    expect(add(undefined, 10)).to.equal(10);
+  });
+&nbsp;
+  // unit_ADD_07, add two undefined
+  it('add.js: add two undefined values', function() {
+    expect(add(undefined, undefined)).to.equal(0);
+  });
+&nbsp;
+  // unit_ADD_08, add integer and string
+  it('add.js: add integer and string', function() {
+    expect(add(5, "asd")).to.equal("5asd");
+  });
+&nbsp;
+  // Extra tests
+&nbsp;
+  // add null + null
+  it('add.js: add null and null', function() {
+    expect(add(null, null)).to.equal(0);
+  });
+&nbsp;
+  // add negative floats
+  it('add.js: add negative float', function() {
+    expect(add(-2.5, -1.5)).to.equal(-4.0);
+  });
+&nbsp;
+  // add number and NaN
+  it('add.js: add number and NaN', function() {
+    expect(add(10, NaN)).to.be.NaN;
+  });
+&nbsp;
+  // Add large integers
+  it('add.js: add large integers', function() {
+    expect(add(1000000000, 2000000000)).to.equal(3000000000);
+  });
+&nbsp;
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
